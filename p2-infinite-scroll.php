@@ -2,6 +2,8 @@
 
 /**
  * Plugin Name: P2 Infinite Scroll
+ * Plugin URI: 
+ * Description: Adds support to the P2 theme for Jetpack Infinite Scroll
  * Author: Kyle Scheuerlein
  * Version: 1.0
  * License: GPL2
