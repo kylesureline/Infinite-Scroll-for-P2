@@ -27,7 +27,7 @@ This plugin adds support for Jetpack Infinite Scroll. You'll need to have Jetpac
 
 = Does this work for other themes? =
 
-Maybe. It's designed for P2 and any P2 child themes.
+Probably not. It's designed for P2 and any P2 child themes.
 
 == Screenshots ==
 
