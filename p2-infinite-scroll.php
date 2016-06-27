@@ -26,3 +26,7 @@ function p2_infinite_scroll_init() {
 }
 
 add_action( 'after_setup_theme', 'p2_infinite_scroll_init' );
+
+// add CSS file to hide the built-in "old posts link"
+wp_register_style( 'p2-infinite-scroll-css', plugin_dir_url( __FILE__ ) . 'p2-infinite-scroll.css' );
+wp_enqueue_style('p2-infinite-scroll-css');
