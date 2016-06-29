@@ -7,7 +7,7 @@
  * Author: Kyle Scheuerlein
  * Version: 1.0
  * License: GPL2
- * Last Updated: June 26, 2016
+ * Last Updated: June 29, 2016
  */
 
 function infinite_scroll_get_posts() {
@@ -16,7 +16,7 @@ function infinite_scroll_get_posts() {
 	endwhile;
 }
 
-function p2_infinite_scroll_init() {
+function infinite_scroll_p2_init() {
 	add_theme_support( 'infinite-scroll', array(
 		'type' => 'click',
 		'container' => 'postlist',
@@ -27,8 +27,8 @@ function p2_infinite_scroll_init() {
 	) );
 }
 
-add_action( 'after_setup_theme', 'p2_infinite_scroll_init' );
+add_action( 'after_setup_theme', 'infinite_scroll_p2_init' );
 
 // add CSS file to hide the built-in "old posts link"
-wp_register_style( 'p2-infinite-scroll-css', plugin_dir_url( __FILE__ ) . 'p2-infinite-scroll.css' );
-wp_enqueue_style('p2-infinite-scroll-css');
+wp_register_style( 'infinite-scroll-p2-css', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.css' );
+wp_enqueue_style('infinite-scroll-p2-css');
