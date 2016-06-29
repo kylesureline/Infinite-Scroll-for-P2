@@ -10,6 +10,23 @@
  * Last Updated: June 29, 2016
  */
 
+/**
+ * Don't activate if P2 isn't active
+ */
+function checkTheme() {
+	$plugin = plugin_basename( __FILE__ );
+	$plugin_data = plugin_basename( __FILE__, false );
+	$theme = wp_get_theme();
+	if( 'P2' == $theme->name || 'P2' == $theme->parent_theme ) {
+		// do nothing
+	}
+	else {
+		deactivate_plugins( $plugin );
+		wp_die( "<strong>Infinite Scroll for P2</strong> requires the <strong>P2 Theme</strong> or a child theme of it, and has been deactivated!<br /><br />Back to the WordPress <a href='".get_admin_url(null, 'plugins.php')."'>Plugins page</a>." );
+	}
+}
+add_action( 'admin_init', 'checkTheme' );
+
 function infinite_scroll_get_posts() {
 	while ( have_posts() ) : the_post();
 		p2_load_entry();
