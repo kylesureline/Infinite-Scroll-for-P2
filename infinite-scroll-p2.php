@@ -46,6 +46,11 @@ function infinite_scroll_p2_init() {
 
 add_action( 'after_setup_theme', 'infinite_scroll_p2_init' );
 
-// add CSS file to hide the built-in "old posts link"
-wp_register_style( 'infinite-scroll-p2-css', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.css' );
-wp_enqueue_style('infinite-scroll-p2-css');
+// use JavaScript to hide the default "Older posts" link
+// this way visitors that don't have JavaScript enabled can still see older posts
+function infinite_scroll_p2_link_scripts() {
+ 
+	wp_enqueue_script( 'infinite-scroll-p2', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.js' );
+
+}
+add_action( 'wp_enqueue_scripts', 'infinite_scroll_p2_link_scripts' );
