@@ -50,7 +50,11 @@ add_action( 'after_setup_theme', 'infinite_scroll_p2_init' );
 // this way visitors that don't have JavaScript enabled can still see older posts
 function infinite_scroll_p2_link_scripts() {
  
-	wp_enqueue_script( 'infinite-scroll-p2', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.js' );
-
+	// Load jQuery if it isn't already
+	wp_enqueue_script('jquery');
+ 
+	// Load custom jQuery
+	wp_enqueue_script( 'infinite-scroll-p2', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.js', array('jquery'), '1.0', true );
+ 
 }
 add_action( 'wp_enqueue_scripts', 'infinite_scroll_p2_link_scripts' );
