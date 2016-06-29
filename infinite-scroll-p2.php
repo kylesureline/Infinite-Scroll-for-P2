@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: P2 Infinite Scroll
+ * Plugin Name: Infinite Scroll for P2
  * Plugin URI: 
  * Description: Adds support to the P2 theme for Jetpack Infinite Scroll
  * Author: Kyle Scheuerlein
