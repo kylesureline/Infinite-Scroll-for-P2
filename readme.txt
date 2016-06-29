@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Infinite Scroll for P2 ===
 Contributors: kylesureline
 Donate link: http://www.kylescheuerlein.com/
 Tags: p2, infinite, scroll, jetpack
@@ -12,7 +12,7 @@ Add support to the P2 theme for Jetpack Infinite Scroll.
 
 == Description ==
 
-Add support to the P2 theme for Jetpack Infinite Scroll.
+Add support to the P2 theme for Jetpack Infinite Scroll. This will also automatically hide the default "Older posts" link in place of the infinite scroll button (for visitors that have JavaScript enabled).
 
 == Installation ==
 
