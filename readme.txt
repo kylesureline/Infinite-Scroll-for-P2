@@ -31,6 +31,8 @@ Probably not. It's designed for P2 and any P2 child themes.
 
 == Screenshots ==
 
+1. Example of the Infinite Scroll button on the P2 theme.
+
 == Changelog ==
 
 = 1.0 =
