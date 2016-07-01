@@ -49,14 +49,19 @@ add_action( 'after_setup_theme', 'infinite_scroll_p2_init' );
 // use JavaScript to hide the default "Older posts" link
 // this way visitors that don't have JavaScript enabled can still see older posts
 function infinite_scroll_p2_link_scripts() {
+
+	// check if Jetpack is active
+	if ( is_plugin_active( 'jetpack/jetpack.php' ) ) {
+		// check if Jetpack's infinite scroll module is active
+		if( Jetpack::is_module_active( 'infinite-scroll' )) {
  
-	// Load jQuery if it isn't already
-	wp_enqueue_script('jquery');
+			// Load jQuery if it isn't already
+			wp_enqueue_script('jquery');
  
-	// Load custom jQuery
-	// only load if Jetpack's infinite scroll module is active
-	if( Jetpack::is_module_active( 'infinite-scroll' )) {
-		wp_enqueue_script( 'infinite-scroll-p2', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.js', array('jquery'), '1.0', true );
+			// Load custom jQuery
+			wp_enqueue_script( 'infinite-scroll-p2', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.js', array('jquery'), '1.0', true );
+	
+		}
 	}
 }
 // enqueue scripts
