@@ -54,9 +54,10 @@ function infinite_scroll_p2_link_scripts() {
 	wp_enqueue_script('jquery');
  
 	// Load custom jQuery
+	// only load if Jetpack's infinite scroll module is active
 	if( Jetpack::is_module_active( 'infinite-scroll' )) {
 		wp_enqueue_script( 'infinite-scroll-p2', plugin_dir_url( __FILE__ ) . 'infinite-scroll-p2.js', array('jquery'), '1.0', true );
 	}
 }
-// only load scripts if the Jetpack's infinite-scroll module is activated
+// enqueue scripts
 add_action( 'wp_enqueue_scripts', 'infinite_scroll_p2_link_scripts' );
