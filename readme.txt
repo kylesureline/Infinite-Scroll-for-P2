@@ -40,7 +40,3 @@ Probably not. It's designed for P2 and any P2 child themes.
 
 = 1.0 =
 * Plugin release
-
-== Arbitrary section ==
-
-== A brief Markdown Example ==
