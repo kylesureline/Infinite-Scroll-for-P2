@@ -9,6 +9,7 @@
  * License: GPL2
  * Last Updated: June 29, 2016
  */
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 /**
  * Don't activate if P2 isn't active
